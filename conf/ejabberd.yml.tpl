@@ -98,7 +98,7 @@ listen:
     module: ejabberd_service
     hosts:
       "jitsi-videobridge.localhost":
-        password: "{{ env['EJABBERD_LOGLEVEL'] or 1337 }}"
+        password: "{{ env['JITSI_PASSWD'] or 1337 }}"
 
 ###   SERVER TO SERVER
 ###   ================
