@@ -93,7 +93,12 @@ listen:
     tls: true
     certfile: "/opt/ejabberd/ssl/host.pem"
     {% endif %}
-
+  -
+    port: 5275
+    module: ejabberd_service
+    hosts:
+      "jitsi-videobridge.localhost":
+        password: "{{ env['EJABBERD_LOGLEVEL'] or 1337 }}"
 
 ###   SERVER TO SERVER
 ###   ================
