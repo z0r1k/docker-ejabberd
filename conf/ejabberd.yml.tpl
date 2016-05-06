@@ -97,7 +97,7 @@ listen:
     port: 5275
     module: ejabberd_service
     hosts:
-      "jitsi-videobridge.localhost":
+      "jitsi-videobridge.{{ env['XMPP_DOMAIN'] or localhost }}":
         password: "{{ env['JITSI_PASSWD'] or 1337 }}"
 
 ###   SERVER TO SERVER
