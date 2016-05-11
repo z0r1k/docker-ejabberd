@@ -1,5 +1,5 @@
 FROM debian:jessie
-MAINTAINER Rafael Römhild <rafael@roemhild.de>
+MAINTAINER Mykhailo Lieibenson <gramatron@gmail.com>
 
 ENV EJABBERD_BRANCH=16.04 \
     EJABBERD_USER=ejabberd \
