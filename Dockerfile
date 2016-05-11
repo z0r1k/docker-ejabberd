@@ -97,7 +97,7 @@ ADD https://raw.githubusercontent.com/rankenstein/ejabberd-auth-mysql/master/aut
 RUN chmod a+rx $EJABBERD_HOME/scripts/lib/auth_mysql.py
 
 # Add config templates
-ADD ./conf /opt/ejabberd/conf
+ADD ./conf $EJABBERD_HOME/conf
 
 # Continue as user
 USER $EJABBERD_USER
