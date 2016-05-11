@@ -99,6 +99,7 @@ listen:
       "jitsi-videobridge.{{ env['XMPP_DOMAIN'] or localhost }}":
         password: "{{ env['JITSI_PASSWD'] or 1337 }}"
 -
+    port: 5347
     module: ejabberd_service
     hosts:
       "jitsi-meet-focus.{{ env['XMPP_DOMAIN'] or localhost }}":
