@@ -69,7 +69,6 @@ listen:
     access_commands:
       configure:
         all: []
-
   -
     port: 5280
     module: ejabberd_http
@@ -99,6 +98,11 @@ listen:
     hosts:
       "jitsi-videobridge.{{ env['XMPP_DOMAIN'] or localhost }}":
         password: "{{ env['JITSI_PASSWD'] or 1337 }}"
+-
+    module: ejabberd_service
+    hosts:
+      "jitsi-meet-focus.{{ env['XMPP_DOMAIN'] or localhost }}":
+        password: "{{ env['JITSI_MEET_PASSWD'] or 1337 }}"
 
 ###   SERVER TO SERVER
 ###   ================
@@ -132,7 +136,6 @@ auth_method:
 anonymous_protocol: login_anon
 allow_multiple_connections: true
 {%- endif %}
-
 
 ## LDAP authentication
 
@@ -287,7 +290,6 @@ access:
     all: 400 # MiB
   hard_upload_quota:
     all: 500 # MiB
-
 
 language: "en"
 
