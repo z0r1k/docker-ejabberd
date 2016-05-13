@@ -69,6 +69,7 @@ listen:
     access_commands:
       configure:
         all: []
+
   -
     port: 5280
     module: ejabberd_http
@@ -98,7 +99,7 @@ listen:
     hosts:
       "jitsi-videobridge.{{ env['XMPP_DOMAIN'] or localhost }}":
         password: "{{ env['JITSI_PASSWD'] or 1337 }}"
--
+  -
     port: 5347
     module: ejabberd_service
     hosts:
